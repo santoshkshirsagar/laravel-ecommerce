@@ -24,19 +24,50 @@
         <div class="grid grid-cols-6">
             <div class="col-span-1">
     
- 
-            <main class="flex justify-center items-center p-4 h-screen w-full bg-gradient-to-r from-green-100 to-blue-100">
-  <div class="bg-white w-full sm:w-1/2 lg:w-96 border border-gray-200 divide-y divide-gray-200">
+            <div class="flex justify-between h-16 px-4">
+                <!-- Logo -->
+                <div class="shrink-0 flex items-center">
+                    <a href="{{ route('dashboard') }}">
+                        <x-jet-application-mark class="block h-9 w-auto" />
+                    </a>
+                </div>
+
+            </div>
+  <div class="bg-white w-full border border-gray-200 divide-y divide-gray-200">
     <details>
-      <summary class=" py-3 px-4 cursor-pointer select-none w-full outline-none">How is this made?</summary>
-      <p class="pt-1 pb-3 px-4">With the HTML5 <code class="text-sm text-red-500">details</code> element and some Tailwind for showcase.</pre>
+      <summary class=" py-3 px-4 cursor-pointer select-none w-full outline-none">Home Page</summary>
+                <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-700 rounded px-4 py-2  w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+</svg>
+                        <p class="text-base leading-4  ">Banners</p>                        
+                </button>
+                <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-700 rounded px-4 py-2  w-full">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+</svg>                       
+                        <p class="text-base leading-4  ">Section 2</p>                        
+                </button>
     </details>
     <details>
-      <summary class=" py-3 px-4 cursor-pointer select-none w-full">Can I use it?</summary>
-      <p class="pt-1 pb-3 px-4">Of course. It's yours to use wherever and whenever you like.</p>
+        <summary class=" py-3 px-4 cursor-pointer select-none w-full">System</summary>
+        <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-700 rounded px-4 py-2  w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+</svg>
+        <p class="text-base leading-4  ">Users</p>                        
+        </button>
+
+    
+        <x-nav.button title="Roles">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </x-nav.button>
+        <x-nav.button title="Permissions">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </x-nav.button>
+
     </details>
   </div>
-</main>
 
             
             </div>
