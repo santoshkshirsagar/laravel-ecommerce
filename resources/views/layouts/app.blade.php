@@ -35,20 +35,10 @@
             </div>
   <div class="bg-white w-full border border-gray-200 divide-y divide-gray-200">
     <details>
-      <summary class=" py-3 px-4 cursor-pointer select-none w-full outline-none">Home Page</summary>
-                <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-700 rounded px-4 py-2  w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-</svg>
-                        <p class="text-base leading-4  ">Banners</p>                        
-                </button>
-                <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-700 rounded px-4 py-2  w-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-</svg>                       
-                        <p class="text-base leading-4  ">Section 2</p>                        
-                </button>
+        <summary class=" py-3 px-4 cursor-pointer select-none w-full outline-none">Content Blocks</summary>
+        @livewire('content.menu')
     </details>
+
     <details>
         <summary class=" py-3 px-4 cursor-pointer select-none w-full">System</summary>
         <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-700 rounded px-4 py-2  w-full">
