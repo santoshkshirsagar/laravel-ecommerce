@@ -10,8 +10,14 @@ class Components extends Component
 {
     use WithFileUploads;
     public $block, $inputs=array(), $files=array(), $showForm=false;
+    public $status='Active', $sequence=1, $published_from, $published_to;
 
-    protected $rules=[];
+    protected $rules=[
+        'status'=>'required',
+        'sequence'=>'required',
+        'published_from'=>'nullable',
+        'published_to'=>'nullable',
+    ];
     protected $validationAttributes = [];
 
     public function mount()
@@ -72,7 +78,13 @@ class Components extends Component
         foreach($paths as $fileId=>$path){
             $this->inputs[$fileId]=$path;
         }
-        dd(json_encode($this->inputs));
+        $data['content_block_id']=$this->block->id;
+        $data['status']=$this->block->id;
+        $data['sequence']=$this->block->id;
+        $data['json_data']=json_encode($this->inputs);
+        ContentComponent::create($data);
+        $this->showForm=false;
+        $this->block->refresh();
     }
     public function render()
     {

@@ -57,5 +57,47 @@
     @else
         <a wire:click="addnew" class="float-right bg-blue-600 p-2 rounded text-white mb-3">Add</a>
         <div class="clear-both"></div>
+
+        <div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="py-4 inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <table class="min-w-full">
+            <thead class="border-b bg-gray-50 text-left">
+                <tr>
+                    @foreach($block->inputs as $input)
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+                    {{ $input->label }}
+                    </th>
+                    @endforeach
+                
+                </tr>
+            </thead class="border-b">
+            <tbody>
+            @foreach($block->components as $component)
+                <?php $data=json_decode($component->json_data, true); ?>
+                <tr>
+                    @foreach($block->inputs as $input)
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                        @if($input->type=='image')
+                            <div class="shrink-0 mb-3">
+                                <img class="h-16 w-16 object-cover rounded" src="{{ asset('storage/'.$data[$input->input_id]) }}" alt="preview"/>
+                            </div>
+                        @else
+                            {{ $data[$input->input_id] }}
+                        @endif
+                        </td>
+                    @endforeach
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     @endif
 </div>

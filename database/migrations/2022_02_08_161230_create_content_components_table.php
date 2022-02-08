@@ -20,7 +20,7 @@ class CreateContentComponentsTable extends Migration
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->integer('sequence');
-            $table->text('json')->nullable();
+            $table->text('json_data')->nullable();
             $table->enum('status',['Active','Inactive'])->default('Active');
             $table->timestamp('published_from', $precision = 0)->nullable();
             $table->timestamp('published_to', $precision = 0)->nullable();
